@@ -43,7 +43,6 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_AGREEABLE_BAY_0CF73160F }}
           action: "upload"
           app_location: "/"            # Root folder containing index.html
-          api_location: ""             # No backend API
           output_location: ""          # No build output folder needed
           app_build_command: ""        # Skip build step completely
           github_id_token: ${{ steps.idtoken.outputs.result }}
