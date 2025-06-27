@@ -21,9 +21,9 @@ jobs:
 
     - name: Sync frontend to S3
       run: |
-        aws s3 cp index.html s3://${{ secrets.S3_BUCKET }}/
-        aws s3 cp style.css s3://${{ secrets.S3_BUCKET }}/
-        aws s3 sync ./images s3://${{ secrets.S3_BUCKET }}/images --delete
+        aws s3 cp index.html s3://${{secrets.S3_BUCKET}}/
+        aws s3 cp style.css s3://${{secrets.S3_BUCKET}}/
+        aws s3 sync ./images s3://${{secrets.S3_BUCKET}}/images --delete
 
     - name: Invalidate CloudFront cache
       if: env.CLOUDFRONT_DIST_ID != ''
